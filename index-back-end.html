@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Portfolio Duaa-Ajami;>_
+        <</title>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <!-- main css Portfolio Duaa-Ajami file -->
+            <link rel="stylesheet" href="css/style.css">
+            <!-- webfonts file -->
+            <link rel="stylesheet" href="css/all.min.css">
+            <!-- Render All Elements Normally-->
+            <link rel="stylesheet" href="css/normalize.css">
+</head>
+<!-- start header -->
+<header>
+    <div class="container">
+        <a href="" class="logo">
+            <img src="images/Duaa.jpg" alt="">
+        </a>
+        <nav>
+            <i class="fas fa-bars toggle-menu"></i>
+            <ul>
+                <li><a class="active" href="index-back-end.html">Back End</a></li>
+                <li><a href="./index.html#home">Home</a></li>
+                <li><a href="./index.html#services">Services</a></li>
+                <li><a href="./index.html#workGallery">Work Gallery</a></li>
+                <li><a href="./index.htmle#CV">CV</a></li>
+                <li><a href="./index.html#contant">Contant</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<body>
+    <div class="scrolltop " onclick="scrollToTop();"></div>
+    <div class="development">
+        <div class="container">
+            <div class="boxf">
+                <h3>Dawraha Charity</h3>
+                <p>A charitable association targeting patients and the elderly. The site recycles items and tools from a donor to a beneficiary with cooperation with an association Languages ​​used BackEnd(asp.net-C#-Mysql-javascript-oracle) FrontEnd(HTML5-css3-JS-Jquery)..</p>
+                <br>
+                <div class="image">
+                    <img src="images/Dawraha.png" alt="">
+                </div>
+                <div class="link">
+                    <a target="_blank" href="./page_not_found.html">You can browse the site through this link</a><br><br>
+                </div>
+            </div>
+            <div class="this-site">
+                <p>The next is more beautiful, God willing <span>😊</span></p>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        window.addEventListener('scroll', function() {
+            var scroll = document.querySelector('.scrolltop');
+            scroll.classList.toggle("scroll-active", window.scrollY > 500)
+        })
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            })
+        }
+    </script>
+</body>
+
+</html>
