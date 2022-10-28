@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microfinance Bank</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Render All Elements Normally-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap" rel="stylesheet">
+    <script type="text/javascript">
+        const form = document.querySelector('#create-account-form');
+
+        function CalucAnnualInterest() {
+            var typeloan = document.getElementById('type-loan').value;
+            var amount = document.getElementById("Loanamount").value;
+            if (typeloan && amount) {
+                switch (typeloan) {
+                    case "1":
+                        document.getElementById('annual_interest').value = amount * 0.05;
+                        break;
+                    case "2":
+                        document.getElementById('annual_interest').value = 0;
+                        break;
+                    case "3":
+                        document.getElementById('annual_interest').value = amount * 0.1;
+                        break;
+                    case "4":
+                        document.getElementById('annual_interest').value = amount * 0.11;
+                        break;
+                    case "5":
+                        document.getElementById('annual_interest').value = amount * 0.18;
+                        break;
+                    case "6":
+                        document.getElementById('annual_interest').value = amount * 0.14;
+                        break;
+                    case "7":
+                        document.getElementById('annual_interest').value = amount * 0.12;
+                        break;
+                    case "8":
+                        document.getElementById('annual_interest').value = amount * 0.14;
+                        break;
+
+                }
+            }
+        }
+
+        function loadPage() {
+            document.getElementById('date-text').innerText = "select date";
+            Captcha();
+        }
+
+        function Captcha() {
+            var alpha = new Array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z');
+            var i;
+            for (i = 0; i < 6; i++) {
+                var a = alpha[Math.floor(Math.random() * alpha.length)];
+                var b = alpha[Math.floor(Math.random() * alpha.length)];
+                var c = alpha[Math.floor(Math.random() * alpha.length)];
+                var d = alpha[Math.floor(Math.random() * alpha.length)];
+                var e = alpha[Math.floor(Math.random() * alpha.length)];
+                var f = alpha[Math.floor(Math.random() * alpha.length)];
+                var g = alpha[Math.floor(Math.random() * alpha.length)];
+            }
+            var code = a + ' ' + b + ' ' + ' ' + c + ' ' + d + ' ' + e + ' ' + f + ' ' + g;
+            document.getElementById("mainCaptcha").innerText = code;
+            document.getElementById('errCaptcha').innerText = ""
+            document.getElementById('SuccCaptcha').innerText = ""
+        }
+
+        function ValidCaptcha() {
+            var string1 = removeSpaces(document.getElementById('mainCaptcha').innerText);
+            var string2 = removeSpaces(document.getElementById('txtInput').value);
+            if (string1 == string2) {
+                document.getElementById('SuccCaptcha').innerText = "Match"
+                document.getElementById('errCaptcha').innerText = ""
+                return true;
+            } else {
+                document.getElementById('SuccCaptcha').innerText = ""
+                document.getElementById('errCaptcha').innerText = "Mismatch"
+                return false;
+            }
+        }
+
+        function removeSpaces(string) {
+            return string.split(' ').join('');
+        }
+
+        function FieldRequired(value, errid) {
+            if (!value) {
+                document.getElementById(errid).innerHTML = "This field is required.";
+                return false;
+            } else {
+                document.getElementById(errid).innerHTML = "";
+                return true;
+            }
+        }
+
+        function CheckName() {
+            var myName = document.getElementById("username");
+            if (!FieldRequired(myName.value, "errName")) return false;
+            var letters = /^[\u0621-\u064A\u0660-\u0669A-Za-z\s]+$/;
+            var pos = myName.value.search(letters);
+            if (pos != 0) {
+                var text = "Full Name only has letters.";
+                document.getElementById("errName").innerHTML = text;
+                myName.focus();
+                return false;
+            } else {
+                document.getElementById("errName").innerHTML = "";
+                return true;
+            }
+        }
+
+        function CheckPhone() {
+            var myPhone = document.getElementById("Number");
+            if (!FieldRequired(myPhone.value, "errNumber")) return false;
+            var pos = myPhone.value.search(/^[0][9][^0127]\d{7}$/);
+            if (pos != 0) {
+                var text = "Phone Number has to start 09 and must consist of 10 numbers and must match the MTN and Syriatel numbers";
+                document.getElementById("errNumber").innerHTML = text;
+                myPhone.focus();
+                return false;
+            } else {
+                document.getElementById("errNumber").innerHTML = "";
+                return true;
+            }
+        }
+
+        function CheckDate() {
+            var myDate = document.getElementById("birthday");
+            var dateText = document.getElementById('date-text');
+            if (myDate.value)
+                dateText.innerText = new Date(myDate.value).getUTCDate() + ' - ' + (new Date(myDate.value).getMonth() + 1) + ' - ' + new Date(myDate.value).getFullYear();
+
+            if (!FieldRequired(myDate.value, "errDate")) return false;
+            return true;
+        }
+
+        function CheckId() {
+            var myId = document.getElementById("NumID");
+            if (!FieldRequired(myId.value, "errId")) return false;
+            var number = /^01|02|03|04|05|06|07|08|14|13|12|11|10|09[0-9]{9}$/;
+            var pos = myId.value.search(number);
+            if (pos != 0 || myId.value.length != 11) {
+                var text = "The national number is incorrect It must consist of 11 digits and the two digits to the left symbolize the governorate (01-02-03-04-05-06-07-08-09-10-11-12-13-14";
+                document.getElementById("errId").innerHTML = text;
+                myId.focus();
+                return false;
+            } else {
+                document.getElementById("errId").innerHTML = "";
+                return true;
+            }
+        }
+
+        function CheckLoan() {
+            var amount = document.getElementById("Loanamount").value;
+            if (!FieldRequired(amount, "errAmount")) return false;
+            if (amount < 1000000 || amount > 10000000) {
+                var text = "Loan amount must be between 1 million and 10 million";
+                document.getElementById("errAmount").innerHTML = text;
+                num.focus();
+                return false;
+            } else {
+                CalucAnnualInterest();
+                document.getElementById("errAmount").innerHTML = "";
+                return true;
+            }
+        }
+
+        function CheckEmail() {
+            var myEmail = document.getElementById("email");
+            if (!FieldRequired(myEmail.value, "errEmail")) return false;
+            var email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            var pos = myEmail.value.search(email);
+            if (pos != 0) {
+                var text = "You have entered an invalid email address : someone@example.com";
+                document.getElementById("errEmail").innerHTML = text;
+                myEmail.focus();
+                return false;
+            } else {
+                document.getElementById("errEmail").innerHTML = "";
+                return true;
+            }
+        }
+
+        function ValidationForm() {
+            ValidCaptcha();
+            CheckName();
+            CheckId();
+            CheckDate();
+            CheckLoan();
+            CheckPhone();
+            CheckEmail();
+            if (!ValidCaptcha() || !CheckName() || !CheckId() || !CheckDate() || !CheckLoan() ||
+                !CheckPhone() || !CheckEmail()) return false;
+            else return true;
+        }
+
+        function formSubmit() {
+            if (ValidationForm()) {
+                var form = document.getElementById('create-account-form')
+                form.submit();
+            } else {
+
+            }
+        }
+    </script>
+</head>
+
+<body onload="loadPage();">
+    <!-- start header -->
+    <header>
+        <div class="container">
+            <a href="" class="logo">
+                <img src="images/logo2.png" alt="">
+            </a>
+            <nav>
+                <i class="fas fa-bars toggle-menu"></i>
+                <ul>
+                    <!-- <li><a href="./index.html">Home</a></li> -->
+                    <li><a href="./aboutus.html">Home</a></li>
+                    <li><a href="./Products.html">Products</a></li>
+                    <li><a class="active" href="./Req_Loan.html">Req_Loan</a></li>
+                    <li><a href="#contant">Contant</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Start Landing -->
+    <div class="container">
+        <div class="req">
+
+            <form id="create-account-form" action="result.html" method="GET">
+
+                <table>
+                    <tr>
+                        <td>
+                            <label for="username"> Full Name <small class="error">*</small> </label></td>
+
+                        <td><input class="textinput" type="text" id="username" placeholder="enter the full name" name="Full Name" onkeyup=" CheckName();" required>
+                            <div>
+                                <small class="error" id="errName"></small>
+                            </div>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            <label for="username">National number <small class="error">*</small></label> </td>
+                        <td>
+                            <input type="number" id="NumID" placeholder="enter the National number" name="The ID number" onkeyup="CheckId();" required />
+                            <div>
+                                <small class="error" id="errId"></small>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Date of Birth <small class="error">*</small></td>
+                        <td>
+                            <input type="date" id="birthday" name="Date of Birth" class="w-date" min="1997-01-01" max="2070-12-31" required onchange="CheckDate()" />
+                            <small id="date-text"></small>
+                            <div>
+                                <small class="error" id="errDate"></small>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="username"> Phone Number <small class="error">*</small> </label></td>
+                        <td>
+                            <input type="text" id="Number" placeholder="enter the Phone Number" name="Mobile Number" onkeyup="CheckPhone();" placeholder="ddd-dddd-ddd" required />
+                            <div>
+                                <small class="error" id="errNumber"></small>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Email <small class="error">*</small></td>
+                        <td>
+                            <input typr="email" name="Email" id="email" onkeyup="CheckEmail()" placeholder="someone@example.com" required />
+                            <div>
+                                <small class="error" id="errEmail"></small>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Required Loan amount <small class="error">*</small></td>
+                        <td>
+                            <input type="number" name=" required Loan amount" placeholder="1,000,000" id="Loanamount" min="1000000" max="10000000" onkeyup="CheckLoan()" onchange="CheckLoan()" ; required />
+                            <div>
+                                <small class="error" id="errAmount"></small>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> The type of loan required <small class="error">*</small> </td>
+                        <td>
+                            <select class="colorselect" name="The type of loan required" id="type-loan" required onchange="CalucAnnualInterest()">
+                             <option value="1">Annual interest savings account 5 %</option>
+                             <option value="2">Current account </option>
+                             <option value="3"> Annual interest education loan 10% </option>
+                             <option value="4"> Home loan at annual interest 11% </option>
+                             <option value="5">Commercial loan at annual interest 18% </option>
+                             <option value="6"> Agricultural loan at annual interest 14% </option>
+                             <option value="7">Annual interest transfer loan 12%</option>
+                             <option value="8">Workshop loan at annual interest 14%</option>
+                         </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Annual interest :</td>
+                        <td>
+                            <input type="text" name="Annual Interest" id="annual_interest" readonly/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Number of loan years <small class="error">*</small></td>
+                        <td>
+                            <select class="colorselect" name=" Number of loan years " required>
+                             <option value="3"> 3 </option>
+                             <option value="5"> 5 </option>
+                             <option value="10"> 10 </option>
+                             <option value="15"> 15 </option>
+                             <option value="20"> 20 </option>
+                         </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Payment method <small class="error">*</small></td>
+                        <td>
+                            <input type="radio" name="paid" value="monthly" checked required> monthly &nbsp;&nbsp;
+                            <input type="radio" name="paid" value="Quarterly" required>Quarterly &nbsp;&nbsp;
+                            <input type="radio" name="paid" value="annual" required>annual &nbsp;&nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Check you're not a robot.<small class="error">*</small></label>
+                            <div id="mainCaptcha"></div>
+                        </td>
+                        <td>
+                            <input class="clilk" type="button" id="refresh" value="reCaptcha" onclick="Captcha();" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" id="txtInput" placeholder="Please write the text" onkeyup="ValidCaptcha();" required />
+                            <div>
+                                <small class="succ" id="SuccCaptcha"></small>
+                                <small class="error" id="errCaptcha"></small>
+                            </div>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td> <input class="clilk" type="button" value="Send" id="btn-sub" onclick="formSubmit()" /></td>
+                        <td> <input class="clilk" type="reset" value="reset" id="btn-res" /></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    <!-- End Landing -->
+
+
+    <!-- Start Contact -->
+    <div class="scrolltop" onclick="scrollToTop();"></div>
+    <footer class="footer" id="contant">
+        <div class="container">
+            <div class="boxcontant">
+                <h3>Microfinance Bank</h3>
+                <p class="textc"> Social Media Links</p>
+                <ul class="socialm">
+
+                    <li>
+                        <a href="https://t.me/DuaaAjami" class="havesocial" target="_blank">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/duaa.ajami.57/" class="havesocial" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/duaa-ajami-389516202/" class="havesocial" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/duaa.ajami" class="havesocial" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+
+                </ul><br><br>
+                <p class="textc">
+                    The information contained in the offers was obtained from open data sources affiliated with the banks and displayed on their websites, or from the website of the Central Bank of Syria, or directly from banks. All offers are subject to the terms and conditions
+                    of the banks without any liability on the site</p>
+            </div>
+            <div class="boxcontant">
+                <div class="line">
+                    <i class="fas fa-map-marker-alt fa-fw"></i>
+                    <div class="info">Syria , Damascus</div>
+                </div>
+                <div class="line">
+                    <i class="far fa-clock fa-fw"></i>
+                    <div class="info">Business Hours: From 10:00 To 18:00</div>
+                </div>
+                <div class="line">
+                    <i class="fas fa-phone-volume fa-fw"></i>
+                    <div class="info">
+                        <span>+963-900-000-000</span>
+                    </div>
+                </div>
+                <div class="line">
+                    <i class="fa fa-envelope"></i>
+                    <div class="info">
+                        <span>MicrofinanceBank@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <h3 class="copyright">Microfinance Bank®<span></span></h3>
+    </footer>
+    <!-- End footer -->
+</body>
+
+</html>

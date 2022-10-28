@@ -1,0 +1,394 @@
+body {
+    background-color: var(--main-background);
+    color: var(--section-color);
+    font-family: "Roboto", sans-serif;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Start Variables */
+
+:root {
+    --main-background: rgb(4, 4, 12);
+    --transparent-color: rgb(15 116 143 / 70%);
+    --dark-color: #19283f;
+    --green-color: #19c8fa;
+    --section-color: #eff7fa;
+    --color-bwhit: #0a090e;
+    --main-transition: 0.3s;
+    --blue-color: #03a9f4;
+    --main-color: #19c8fa;
+}
+
+
+/* End Variables */
+
+
+/* start header */
+
+header .logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.navbar {
+    background-color: var(--main-background);
+}
+
+.navbar .navbar-nav .nav-link {
+    color: white;
+}
+
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+    color: var(--green-color);
+}
+
+.navbar .search {
+    border-left: 1px solid var(--green-color);
+}
+
+.navbar .search svg {
+    color: var(--green-color);
+}
+
+.navbar .navbar-toggler {
+    color: white;
+    font-size: 25px;
+    border-color: white;
+}
+
+.navbar .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar .navbar-toggler[aria-expanded="true"] {
+    border-color: var(--green-color);
+}
+
+
+/* End header */
+
+.carousel-item {
+    height: 100vh;
+    min-height: 300px;
+}
+
+.carousel-caption {
+    bottom: 220px;
+    z-index: 2;
+}
+
+.carousel-caption h5 {
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 25px;
+}
+
+.carousel-caption p {
+    width: 60%;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+.carousel-inner::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.w-100 {
+    height: 100vh;
+}
+
+
+/* responsive css */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .carousel-caption {
+        bottom: 130px;
+    }
+    .carousel-caption p {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .navbar-nav {
+        text-align: center;
+    }
+    .carousel-caption {
+        bottom: 125px;
+    }
+    .carousel-caption h5 {
+        font-size: 17px;
+    }
+    /* .carousel-caption a {
+        padding: 10px 15px;
+    } */
+    .carousel-caption p {
+        font-size: 12px;
+        line-height: 1.6;
+        width: 100%;
+    }
+}
+
+
+/* End Landing */
+
+
+/* Start Services */
+
+.features .icon-holder {
+    height: 200px;
+}
+
+.features .icon-holder svg {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.features .icon-holder .number {
+    font-size: 12rem;
+    color: var(--color-bwhit);
+}
+
+.features .icon-holder .icon {
+    color: var(--green-color);
+    flex-basis: 30px;
+    font-size: 70px;
+}
+
+.features .feat h3 {
+    color: var(--yellow-color);
+}
+
+
+/* End Services */
+
+
+/* start gallery */
+
+.card {
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.card .img-holder {
+    position: relative;
+    overflow: hidden;
+}
+
+.card .img-holder::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -1px;
+    width: 100%;
+    height: 100%;
+}
+
+.card .img-holder::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-style: solid;
+    border-width: 0px 0px 170px 500px;
+    border-color: transparent transparent rgb(4, 4, 12) transparent;
+    transition: var(--main-transition);
+}
+
+.card.img-holder img {
+    max-width: 100%;
+}
+
+.card:hover .img-holder::after {
+    border-width: 170px 500px 170px 0;
+}
+
+.card h2 {
+    position: relative;
+    font-size: 30px;
+    margin: auto;
+    width: fit-content;
+    color: #fff;
+}
+
+.card h2::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 15px;
+    height: 5px;
+    width: calc(100% - 30px);
+}
+
+.card a {
+    display: block;
+    border: 3px solid transparent;
+    width: fit-content;
+    margin: 0 auto 30px;
+    font-weight: bold;
+    font-size: 22px;
+    padding: 10px 30px;
+    border-radius: 6px;
+    transition: var(--main-transition);
+}
+
+.quality .img-holder::before {
+    background-color: rgb(244 64 54 / 60%);
+}
+
+.quality h2::after {
+    background-color: #f44036;
+}
+
+.quality a {
+    color: #f44036;
+    border-color: #f44036;
+    background: linear-gradient(to right, #f44036 50%, rgb(4, 4, 12) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+}
+
+.time .img-holder::before {
+    background-color: rgb(0 150 136 / 60%);
+}
+
+.time h2::after {
+    background-color: #009688;
+}
+
+.time a {
+    color: #009688;
+    border-color: #009688;
+    background: linear-gradient(to right, #009688 50%, rgb(4, 4, 12) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+}
+
+.passion .img-holder::before {
+    background-color: rgb(3 169 244 / 60%);
+}
+
+.passion h2::after {
+    background-color: #03a9f4;
+}
+
+.passion a {
+    color: #03a9f4;
+    border-color: #03a9f4;
+    background: linear-gradient(to right, #03a9f4 50%, rgb(4, 4, 12) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+}
+
+.row .card:hover a {
+    background-position: left bottom;
+    color: white;
+}
+
+
+/* End gallery */
+
+
+/* start cv */
+
+.side {
+    position: relative;
+    background: var(--main-background);
+    border: 1px solid #ccc;
+}
+
+.img-cv {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.img-cv img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.icon {
+    color: var(--blue-color);
+}
+
+li {
+    list-style-type: none;
+}
+
+.percent {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 6px;
+    background: #777;
+    margin-top: 8px;
+}
+
+.percent div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: var(--blue-color);
+}
+
+
+/* End cv */
+
+
+/*end footer & BackEnd */
+
+.scrolltop {
+    position: fixed;
+    bottom: 800px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    background: #fff url(../images/scroll-up.jfif);
+    border-radius: 50%;
+    background-size: 90px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.scrolltop.scroll-active {
+    bottom: 40px;
+    visibility: visible;
+    opacity: 1;
+}

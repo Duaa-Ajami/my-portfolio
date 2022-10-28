@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>DuaaAjami(≥o≤)</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fontGoogle -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100;0,8..144,200;0,8..144,700;1,8..144,100;1,8..144,300;1,8..144,400;1,8..144,600&display=swap"
+        rel="stylesheet">
+    <!-- css files  -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- main css Portfolio Duaa-Ajami file -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+
+<body>
+    <!-- start header -->
+    <header>
+        <nav class="navbar navbar-expand-lg sticky-top  fixed-top">
+            <div class="container">
+                <a class="navbar-brand logo" href="#">
+                    <img src="./images/duaa.jpg" alt="">
+                </a>
+                <!-- <a href="#" class="navbar-brand text-light"><span class="text-primary">Duaa</span>Ajami</a> -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main" aria-controls="main" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                  </button>
+                <div class="collapse navbar-collapse" id="main">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link p-2 p-lg-3 active" aria-current="page" href="#">Full Stack Developer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link p-2 p-lg-3" href="./index.html#services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link p-2 p-lg-3" href="./index.html#workGallery">Work Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link p-2 p-lg-3" href="./index.html#CV">CV</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link p-2 p-lg-3" href="./index.html#contant">Contant</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="scrolltop" onclick="scrollToTop();"></div>
+    <div class="blog pt-5 pb-5 " id="workGallery ">
+        <div class="container ">
+            <div class="row align-items-center ">
+                <div class="col-12 mb-3 align-self-center ">
+                    <div class="card" style=" background-color: rgb(4, 4, 12) ; ">
+                        <img src="./images/img-work/Dawraha.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h3 class="card-title text-center">Dawraha Charity</h3>
+                            <p class="card-text text-center">A charitable association targeting patients and the elderly. The site recycles items and tools from a donor to a beneficiary with cooperation with an association Languages ​​used BackEnd(asp.net-C#-Mysql-javascript-oracle)
+                                FrontEnd(HTML5-css3-JS-Jquery).
+                            </p>
+                            <a class="btn btn-primary text-center" target="_blank" href="./page_not_found.html">You can browse the site through this link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <p class=" text-center">The next is more beautiful, God willing <span>😊</span></p>
+
+        </div>
+    </div>
+    <script type="text/javascript">
+        window.addEventListener('scroll', function() {
+            var scroll = document.querySelector('.scrolltop');
+            scroll.classList.toggle("scroll-active", window.scrollY > 500)
+        })
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            })
+        }
+    </script>
+</body>
+
+</html>

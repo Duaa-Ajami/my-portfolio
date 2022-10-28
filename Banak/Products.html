@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microfinance Bank</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Render All Elements Normally-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+
+</head>
+
+
+<body>
+    <!-- start header -->
+    <header>
+        <div class="container">
+            <a href="" class="logo">
+                <img src="images/logo2.png" alt="">
+            </a>
+            <nav>
+                <i class="fas fa-bars toggle-menu"></i>
+                <ul>
+                    <!-- <li><a href="./index.html">Home</a></li> -->
+                    <li><a href="./aboutus.html">Home</a></li>
+                    <li><a class="active" href="./Products.html">Products</a></li>
+                    <li><a href="./Req_Loan.html">Req_Loan</a></li>
+                    <li><a href="#contant">Contant</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Start products  -->
+    <div class="products">
+        <div class="container">
+            <p>Our products and services</p>
+            <table border="2">
+                <tbody>
+                    <tr onclick="showProductsInformation(1)">
+                        <td>Annual interest savings account 5 %</td>
+                    </tr>
+                    <tr onclick="showProductsInformation(2)">
+                        <td>Current account</td>
+                    </tr>
+                    <tr onclick="showProductsInformation(3)">
+                        <td>Annual interest education loan 10%</td>
+                    </tr>
+                    <tr onclick="showProductsInformation(4)">
+                        <td>Home loan at annual interest 11%</td>
+                    </tr>
+                    <tr onclick="showProductsInformation(5)">
+                        <td>Commercial loan at annual interest 18%</td>
+                    </tr>
+                    <tr onclick="showProductsInformation(6)">
+                        <td>Agricultural loan at annual interest 14%</td>
+                    </tr>
+                    <tr onclick="showProductsInformation(7)">
+                        <td>Annual interest transfer loan 12%</td>
+                    </tr>
+                    <tr onclick="showProductsInformation(8)">
+                        <td>Workshop loan at annual interest 14%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        function showProductsInformation(id) {
+            window.location.assign("./products-information.html?id=" + id);
+        }
+    </script>
+    <!-- End products  -->
+
+
+    <!-- Start Contact -->
+    <div class="scrolltop" onclick="scrollToTop();"></div>
+    <footer class="footer" id="contant">
+        <div class="container">
+            <div class="boxcontant">
+                <h3>Microfinance Bank</h3>
+                <p class="textc"> Social Media Links</p>
+                <ul class="socialm">
+
+                    <li>
+                        <a href="https://t.me/DuaaAjami" class="havesocial" target="_blank">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/duaa.ajami.57/" class="havesocial" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/duaa-ajami-389516202/" class="havesocial" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/duaa.ajami" class="havesocial" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+
+                </ul><br><br>
+                <p class="textc">
+                    The information contained in the offers was obtained from open data sources affiliated with the banks and displayed on their websites, or from the website of the Central Bank of Syria, or directly from banks. All offers are subject to the terms and conditions
+                    of the banks without any liability on the site</p>
+            </div>
+            <div class="boxcontant">
+                <div class="line">
+                    <i class="fas fa-map-marker-alt fa-fw"></i>
+                    <div class="info">Syria , Damascus</div>
+                </div>
+                <div class="line">
+                    <i class="far fa-clock fa-fw"></i>
+                    <div class="info">Business Hours: From 10:00 To 18:00</div>
+                </div>
+                <div class="line">
+                    <i class="fas fa-phone-volume fa-fw"></i>
+                    <div class="info">
+                        <span>+963-900-000-000</span>
+                    </div>
+                </div>
+                <div class="line">
+                    <i class="fa fa-envelope"></i>
+                    <div class="info">
+                        <span>MicrofinanceBank@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <h3 class="copyright">Microfinance Bank®<span></span></h3>
+    </footer>
+    <!-- End footer -->
+</body>
+
+</html>
