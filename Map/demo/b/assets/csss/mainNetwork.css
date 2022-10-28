@@ -1,0 +1,723 @@
+.pin {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50% 50% 50% 0;
+    background: #d5ddec;
+    position: absolute;
+    transform: rotate(-45deg);
+    margin: -68px 0 0 125px;
+    animation-name: bounce;
+    animation-fill-mode: both;
+    animation-duration: 1s;
+}
+
+.pin:after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    margin: 6px 0px 0px 3px;
+    background: #2f2f2f;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.pulse {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    margin: -45px 0px 0px 130px;
+    transform: rotateX(55deg);
+    z-index: 1;
+}
+
+.pulse:after {
+    content: "";
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    margin: -13px 0 0 -13px;
+    animation: pulsate 1s ease-out;
+    animation-iteration-count: infinite;
+    opacity: 0;
+    box-shadow: 0 0 1px 2px #89849b;
+    animation-delay: 1.1s;
+}
+
+.pin-france {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50% 50% 50% 0;
+    background: #d5ddec;
+    position: absolute;
+    transform: rotate(-45deg);
+    margin: -130px 0 0 170px;
+    animation-name: bounce;
+    animation-fill-mode: both;
+    animation-duration: 1s;
+}
+
+.pin-france:after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    margin: 6px 0px 0px 3px;
+    background: #2f2f2f;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.pulse-france {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    margin: -110px 0px 0px 170px;
+    transform: rotateX(55deg);
+    z-index: 1;
+}
+
+.pulse-france:after {
+    content: "";
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    margin: -13px 0 0 -13px;
+    animation: pulsate 1s ease-out;
+    animation-iteration-count: infinite;
+    opacity: 0;
+    box-shadow: 0 0 1px 2px #89849b;
+    animation-delay: 1.1s;
+}
+
+.pin-ltaly {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50% 50% 50% 0;
+    background: #d5ddec;
+    position: absolute;
+    transform: rotate(-45deg);
+    margin: -65px 0 0 270px;
+    animation-name: bounce;
+    animation-fill-mode: both;
+    animation-duration: 2s;
+}
+
+.pin-ltaly:after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    margin: 6px 0px 0px 3px;
+    background: #2f2f2f;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.pulse-ltaly {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    margin: -42px 0px 0px 270px;
+    transform: rotateX(55deg);
+    z-index: 1;
+}
+
+.pulse-ltaly:after {
+    content: "";
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    margin: -13px 0 0 -13px;
+    animation: pulsate 1s ease-out;
+    animation-iteration-count: infinite;
+    opacity: 0;
+    box-shadow: 0 0 1px 2px #89849b;
+    animation-delay: 1.1s;
+}
+
+.pin-Ausria {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50% 50% 50% 0;
+    background: #d5ddec;
+    position: absolute;
+    transform: rotate(-45deg);
+    margin: -170px 0 0 265px;
+    animation-name: bounce;
+    animation-fill-mode: both;
+    animation-duration: 2s;
+}
+
+.pin-Ausria:after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    margin: 6px 0px 0px 3px;
+    background: #2f2f2f;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.pulse-Ausria {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    margin: -140px 0px 0px 270px;
+    transform: rotateX(55deg);
+    z-index: 1;
+}
+
+.pulse-Ausria:after {
+    content: "";
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    margin: -13px 0 0 -13px;
+    animation: pulsate 1s ease-out;
+    animation-iteration-count: infinite;
+    opacity: 0;
+    box-shadow: 0 0 1px 2px #89849b;
+    animation-delay: 1.1s;
+}
+
+.pin-poland {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50% 50% 50% 0;
+    background: #d5ddec;
+    position: absolute;
+    transform: rotate(-45deg);
+    margin: -230px 0 0 300px;
+    animation-name: bounce;
+    animation-fill-mode: both;
+    animation-duration: 2s;
+}
+
+.pin-poland:after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    margin: 6px 0px 0px 3px;
+    background: #2f2f2f;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.pulse-poland {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    margin: -210px 0px 0px 300px;
+    transform: rotateX(55deg);
+    z-index: 1;
+}
+
+.pulse-poland:after {
+    content: "";
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    margin: -13px 0 0 -13px;
+    animation: pulsate 1s ease-out;
+    animation-iteration-count: infinite;
+    opacity: 0;
+    box-shadow: 0 0 1px 2px #89849b;
+    animation-delay: 1.1s;
+}
+
+.pin-lreland {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50% 50% 50% 0;
+    background: #d5ddec;
+    position: absolute;
+    transform: rotate(-45deg);
+    margin: -210px 0 0 80px;
+    animation-name: bounce;
+    animation-fill-mode: both;
+    animation-duration: 2s;
+}
+
+.pin-lreland:after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    margin: 6px 0px 0px 3px;
+    background: #2f2f2f;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.pulse-lreland {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    margin: -185px 0px 0px 85px;
+    transform: rotateX(55deg);
+    z-index: 1;
+}
+
+.pulse-lreland:after {
+    content: "";
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    margin: -13px 0 0 -13px;
+    animation: pulsate 1s ease-out;
+    animation-iteration-count: infinite;
+    opacity: 0;
+    box-shadow: 0 0 1px 2px #89849b;
+    animation-delay: 1.1s;
+}
+
+.pin-UK {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50% 50% 50% 0;
+    background: #d5ddec;
+    position: absolute;
+    transform: rotate(-45deg);
+    margin: -240px 0 0 140px;
+    animation-name: bounce;
+    animation-fill-mode: both;
+    animation-duration: 2s;
+}
+
+.pin-UK:after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    margin: 6px 0px 0px 3px;
+    background: #2f2f2f;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.pulse-Uk {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    margin: -210px 0px 0px 140px;
+    transform: rotateX(55deg);
+    z-index: 1;
+}
+
+.pulse-Uk:after {
+    content: "";
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    margin: -13px 0 0 -13px;
+    animation: pulsate 1s ease-out;
+    animation-iteration-count: infinite;
+    opacity: 0;
+    box-shadow: 0 0 1px 2px #89849b;
+    animation-delay: 1.1s;
+}
+
+.pin-Norway {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50% 50% 50% 0;
+    background: #d5ddec;
+    position: absolute;
+    transform: rotate(-45deg);
+    margin: -300px 0 0 200px;
+    animation-name: bounce;
+    animation-fill-mode: both;
+    animation-duration: 2s;
+}
+
+.pin-Norway:after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    margin: 6px 0px 0px 3px;
+    background: #2f2f2f;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.pulse-Norway {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    margin: -280px 0px 0px 200px;
+    transform: rotateX(55deg);
+    z-index: 1;
+}
+
+.pulse-Norway:after {
+    content: "";
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    margin: -13px 0 0 -13px;
+    animation: pulsate 1s ease-out;
+    animation-iteration-count: infinite;
+    opacity: 0;
+    box-shadow: 0 0 1px 2px #89849b;
+    animation-delay: 1.1s;
+}
+
+.pin-Denmark {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50% 50% 50% 0;
+    background: #d5ddec;
+    position: absolute;
+    transform: rotate(-45deg);
+    margin: -255px 0 0 220px;
+    animation-name: bounce;
+    animation-fill-mode: both;
+    animation-duration: 2s;
+}
+
+.pin-Denmark:after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    margin: 6px 0px 0px 3px;
+    background: #2f2f2f;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.pulse-Denmark {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    margin: -230px 0px 0px 220px;
+    transform: rotateX(55deg);
+    z-index: 1;
+}
+
+.pulse-Denmark:after {
+    content: "";
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    margin: -13px 0 0 -13px;
+    animation: pulsate 1s ease-out;
+    animation-iteration-count: infinite;
+    opacity: 0;
+    box-shadow: 0 0 1px 2px #89849b;
+    animation-delay: 1.1s;
+}
+
+.pin-Sweden {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50% 50% 50% 0;
+    background: #d5ddec;
+    position: absolute;
+    transform: rotate(-45deg);
+    margin: -350px 0 0 280px;
+    animation-name: bounce;
+    animation-fill-mode: both;
+    animation-duration: 2s;
+}
+
+.pin-Sweden:after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    margin: 6px 0px 0px 3px;
+    background: #2f2f2f;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.pulse-Sweden {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    margin: -330px 0px 0px 280px;
+    transform: rotateX(55deg);
+    z-index: 1;
+}
+
+.pulse-Sweden:after {
+    content: "";
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    margin: -13px 0 0 -13px;
+    animation: pulsate 1s ease-out;
+    animation-iteration-count: infinite;
+    opacity: 0;
+    box-shadow: 0 0 1px 2px #89849b;
+    animation-delay: 1.1s;
+}
+
+.pin-Netherland {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50% 50% 50% 0;
+    background: #d5ddec;
+    position: absolute;
+    transform: rotate(-45deg);
+    margin: -220px 0 0 200px;
+    animation-name: bounce;
+    animation-fill-mode: both;
+    animation-duration: 2s;
+}
+
+.pin-Netherland:after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    margin: 6px 0px 0px 3px;
+    background: #2f2f2f;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.pulse-Netherland {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    margin: -195px 0px 0px 200px;
+    transform: rotateX(55deg);
+    z-index: 1;
+}
+
+.pulse-Netherland:after {
+    content: "";
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    margin: -13px 0 0 -13px;
+    animation: pulsate 1s ease-out;
+    animation-iteration-count: infinite;
+    opacity: 0;
+    box-shadow: 0 0 1px 2px #89849b;
+    animation-delay: 1.1s;
+}
+
+.pin-Belgium {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50% 50% 50% 0;
+    background: #d5ddec;
+    position: absolute;
+    transform: rotate(-45deg);
+    margin: -185px 0 0 200px;
+    animation-name: bounce;
+    animation-fill-mode: both;
+    animation-duration: 2s;
+}
+
+.pin-Belgium:after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    margin: 6px 0px 0px 3px;
+    background: #2f2f2f;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.pulse-Belgium {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    margin: -160px 0px 0px 200px;
+    transform: rotateX(55deg);
+    z-index: 1;
+}
+
+.pulse-Belgium:after {
+    content: "";
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    margin: -13px 0 0 -13px;
+    animation: pulsate 1s ease-out;
+    animation-iteration-count: infinite;
+    opacity: 0;
+    box-shadow: 0 0 1px 2px #89849b;
+    animation-delay: 1.1s;
+}
+
+@-moz-keyframes pulsate {
+    0% {
+        transform: scale(0.1, 0.1);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.2, 1.2);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes pulsate {
+    0% {
+        transform: scale(0.1, 0.1);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.2, 1.2);
+        opacity: 0;
+    }
+}
+
+@-o-keyframes pulsate {
+    0% {
+        transform: scale(0.1, 0.1);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.2, 1.2);
+        opacity: 0;
+    }
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(0.1, 0.1);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.2, 1.2);
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes bounce {
+    0% {
+        opacity: 0;
+        transform: translateY(-2000px) rotate(-45deg);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(30px) rotate(-45deg);
+    }
+    80% {
+        transform: translateY(-10px) rotate(-45deg);
+    }
+    100% {
+        transform: translateY(0) rotate(-45deg);
+    }
+}
+
+@-webkit-keyframes bounce {
+    0% {
+        opacity: 0;
+        transform: translateY(-2000px) rotate(-45deg);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(30px) rotate(-45deg);
+    }
+    80% {
+        transform: translateY(-10px) rotate(-45deg);
+    }
+    100% {
+        transform: translateY(0) rotate(-45deg);
+    }
+}
+
+@-o-keyframes bounce {
+    0% {
+        opacity: 0;
+        transform: translateY(-2000px) rotate(-45deg);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(30px) rotate(-45deg);
+    }
+    80% {
+        transform: translateY(-10px) rotate(-45deg);
+    }
+    100% {
+        transform: translateY(0) rotate(-45deg);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        opacity: 0;
+        transform: translateY(-2000px) rotate(-45deg);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(30px) rotate(-45deg);
+    }
+    80% {
+        transform: translateY(-10px) rotate(-45deg);
+    }
+    100% {
+        transform: translateY(0) rotate(-45deg);
+    }
+}
